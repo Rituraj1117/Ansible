@@ -1,0 +1,45 @@
+HOW TO SETUP AND CONFIGURATION ANSIBLE, ANSIBLE PLATBOOK?
+
+Step 1. Install Ansible Package on Ubuntu VMs
+Add Ansible PPA 
+# add-apt-repository ppa:ansible/ansible
+# apt update 
+# apt install ansible -y
+
+
+Step2. Check the Version, all configuration file related ansible.
+# ansible --version
+# ls -l /etc/ansible
+# cd /etc/ansible
+ansible.cfg, hosts, roles
+
+Step3. Create ansible user on Server VMs, 
+NOTE: Create an ansible user on both the Ansible server and the node machines, then configure password less sudo access using the visudo file.
+here create ansible user all VMs. 
+useradd ansible-user
+passwd ansible-user
+
+NOTE: Grant Passwordless direct access to the ansible user in the visudo file.
+
+
+Step4. Generate the Key on Ansible server and copy the key all nodes.
+# ssh-keygen  ==> on ansible server machine.
+# cd /home/ansible_ipa/.ssh/
+
+Here copy the key all ansible nodes
+ssh-copy-id username@ips
+# ssh-copy-id ansible-user@192.168.1.1
+# ssh-copy-id ansible-user@192.168.1.2
+
+
+Step
+
+Step
+
+Step
+
+Step
+
+Step
+
+Step
